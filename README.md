@@ -88,3 +88,5 @@ Start with [the release handoff](docs/RELEASE.md). The prepared workspace includ
 Real smoke, tokenizer and offline raw metric-recomputation gates have run. Human review, full confirmatory pilot, independent human ratings and final human release QA are intentionally not self-approved by an agent. Source/P0 release status and remaining limits are in [acceptance evidence](docs/acceptance.md), [protocol](docs/protocol.md), and [limitations](docs/limitations.md).
 
 Original code: Apache-2.0. Synthetic dataset: CC0-1.0. Model and bundled font/other dependency licenses remain separate; see [third-party notices](THIRD_PARTY_NOTICES.md).
+
+---
