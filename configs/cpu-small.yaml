@@ -1,0 +1,32 @@
+# Draft preset: resolve model and complete preflight before queueing.
+schema_version: '1.0'
+name: ghosttrace-cpu-smoke
+model_profile: qwen25-05b-cpu
+dataset: datasets/smoke-v1
+split_policy: family-heldout-v1
+conditions: [neutral, remorseful, unremorseful]
+templates: [A]
+modes: [fixed_continuation, greedy_generation]
+capture:
+  site: residual_post_block_pre_final_norm
+  layers: all
+  anchors: [last_scenario_token, last_prompt_token]
+  continuation_tokens: 16
+  storage_dtype: float32
+  use_cache: false
+generation:
+  do_sample: false
+  max_new_tokens: 96
+  stop: model_eos
+limits:
+  max_input_tokens: 512
+  max_total_tokens: 640
+  batch_size: 1
+  max_artifact_bytes: 2000000000
+analysis:
+  primary_layer: middle_block
+  primary_metric: normalized_l2
+  bootstrap_draws: 2000
+  bootstrap_seed: 20261027
+order_seed: 73
+preregistration: preregistrations/pilot-v1.md

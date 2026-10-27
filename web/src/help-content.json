@@ -1,0 +1,58 @@
+[
+  {
+    "id": "orientation",
+    "start": 0,
+    "title": "Start with recorded evidence",
+    "action": "Open the Research lab and load the recorded research case. It needs no API or model download.",
+    "meaning": "This is a real pinned Qwen copying diagnostic. You are replaying saved measurements, not running new inference."
+  },
+  {
+    "id": "question",
+    "start": 15,
+    "title": "Define the question",
+    "action": "Open Case study. Read the blue-minus-red target, the donor and recipient contrast, and the prior hypothesis.",
+    "meaning": "Check baseline task behavior before interpreting internals. This small exploratory example does not establish a general copying circuit."
+  },
+  {
+    "id": "graph",
+    "start": 30,
+    "title": "Follow the computation graph",
+    "action": "Return to Linked workspace. Select a component in the computation graph and inspect its block and site.",
+    "meaning": "Structural edges describe the model architecture. An observed activation or a measured intervention is a different kind of evidence."
+  },
+  {
+    "id": "activations",
+    "start": 45,
+    "title": "Inspect literal activations",
+    "action": "Scroll to Activation microscope. Choose a token and a coordinate to inspect its signed floating-point value.",
+    "meaning": "Check axes, normalization and saved-channel coverage. Omitted coordinates are unavailable, not zero; large values are not concept labels."
+  },
+  {
+    "id": "readouts",
+    "start": 60,
+    "title": "Read the output target",
+    "action": "Inspect Target-output readout. Compare the target contrast across captured blocks and the available readout instruments.",
+    "meaning": "A logit lens is an output projection, not a transcript of thoughts. The fitted lens uses a small separate development and held-out corpus."
+  },
+  {
+    "id": "interventions",
+    "start": 75,
+    "title": "Test effects and controls",
+    "action": "Open Interventions. Compare raw signed changes with self, random, reverse and same-condition controls where recorded.",
+    "meaning": "Gradient attribution is an estimate. Exact patches and receiver-path experiments are separate tests. Final full-residual replacement is a wiring control."
+  },
+  {
+    "id": "features",
+    "start": 90,
+    "title": "Keep features and error together",
+    "action": "Open Features & circuits. Inspect reconstruction error and compare a feature attribution estimate with its exact measured edit.",
+    "meaning": "The bundled identity dictionary is a nonlearned coordinate diagnostic. Reconstruction quality alone does not establish behavioral fidelity or a semantic feature."
+  },
+  {
+    "id": "limits",
+    "start": 105,
+    "title": "Save an honest research record",
+    "action": "Return to Case study. Review alternatives, unresolved interpretations and provenance, then use Case JSON to save the recorded evidence.",
+    "meaning": "For new experiments, install the local runtime, validate a pinned model profile, freeze your study and record controls. Human scientific review remains necessary."
+  }
+]

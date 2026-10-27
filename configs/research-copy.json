@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.0",
+  "name": "Copying: component and intervention diagnostic",
+  "question": "Which measured component interventions change the blue-minus-red next-token logit difference in this copying example?",
+  "hypothesis": "Exploratory single-example diagnostic. A final-residual donor patch is a wiring positive control, not a discovered mechanism; other signed effects may be positive, negative, or null.",
+  "model_profile_id": "qwen25-05b-cpu",
+  "conditions": [
+    {"id":"donor","name":"Blue copying context","messages":[{"role":"system","content":"You are a precise copying assistant. Answer with only the code color word, no punctuation."},{"role":"user","content":"The code color is blue. Repeat the code color:"}]},
+    {"id":"recipient","name":"Red copying context","messages":[{"role":"system","content":"You are a precise copying assistant. Answer with only the code color word, no punctuation."},{"role":"user","content":"The code color is red. Repeat the code color:"}]}
+  ],
+  "target": {"kind":"next_token_logit_diff","positive":"blue","negative":"red"},
+  "capture": {"layers":[0,11,23],"positions":[-3,-2,-1],"sites":["resid_pre","attn_in","attn_out","resid_mid","mlp_in","mlp_out","resid_post","final_norm","head_pre","head_contribution","mlp_post_gate","attention_pattern"],"attention":true,"top_k":8,"max_artifact_bytes":100000000},
+  "max_input_tokens":256,
+  "order_seed":73
+}

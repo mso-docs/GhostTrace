@@ -1,0 +1,50 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:07.500
+Open the Research lab and load the recorded research case. It needs no API or model download.
+
+00:00:07.500 --> 00:00:15.000
+This is a real pinned Qwen copying diagnostic. You are replaying saved measurements, not running new inference.
+
+00:00:15.000 --> 00:00:22.500
+Open Case study. Read the blue-minus-red target, the donor and recipient contrast, and the prior hypothesis.
+
+00:00:22.500 --> 00:00:30.000
+Check baseline task behavior before interpreting internals. This small exploratory example does not establish a general copying circuit.
+
+00:00:30.000 --> 00:00:37.500
+Return to Linked workspace. Select a component in the computation graph and inspect its block and site.
+
+00:00:37.500 --> 00:00:45.000
+Structural edges describe the model architecture. An observed activation or a measured intervention is a different kind of evidence.
+
+00:00:45.000 --> 00:00:52.500
+Scroll to Activation microscope. Choose a token and a coordinate to inspect its signed floating-point value.
+
+00:00:52.500 --> 00:01:00.000
+Check axes, normalization and saved-channel coverage. Omitted coordinates are unavailable, not zero; large values are not concept labels.
+
+00:01:00.000 --> 00:01:07.500
+Inspect Target-output readout. Compare the target contrast across captured blocks and the available readout instruments.
+
+00:01:07.500 --> 00:01:15.000
+A logit lens is an output projection, not a transcript of thoughts. The fitted lens uses a small separate development and held-out corpus.
+
+00:01:15.000 --> 00:01:22.500
+Open Interventions. Compare raw signed changes with self, random, reverse and same-condition controls where recorded.
+
+00:01:22.500 --> 00:01:30.000
+Gradient attribution is an estimate. Exact patches and receiver-path experiments are separate tests. Final full-residual replacement is a wiring control.
+
+00:01:30.000 --> 00:01:37.500
+Open Features & circuits. Inspect reconstruction error and compare a feature attribution estimate with its exact measured edit.
+
+00:01:37.500 --> 00:01:45.000
+The bundled identity dictionary is a nonlearned coordinate diagnostic. Reconstruction quality alone does not establish behavioral fidelity or a semantic feature.
+
+00:01:45.000 --> 00:01:52.500
+Return to Case study. Review alternatives, unresolved interpretations and provenance, then use Case JSON to save the recorded evidence.
+
+00:01:52.500 --> 00:02:00.000
+For new experiments, install the local runtime, validate a pinned model profile, freeze your study and record controls. Human scientific review remains necessary.
+

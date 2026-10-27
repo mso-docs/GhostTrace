@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "reviewer": {"kind": "human", "name": ""},
+  "reviewed_at": null,
+  "release_approved": false,
+  "checks": {
+    "dataset_templates": {"status": "pending", "evidence": ""},
+    "token_capture": {"status": "pending", "evidence": ""},
+    "recovery": {"status": "pending", "evidence": ""},
+    "keyboard_responsive": {"status": "pending", "evidence": ""},
+    "offline_replay": {"status": "pending", "evidence": ""},
+    "blinded_ratings": {"status": "pending", "evidence": ""},
+    "interpretation": {"status": "pending", "evidence": ""},
+    "release_inventory": {"status": "pending", "evidence": ""}
+  }
+}

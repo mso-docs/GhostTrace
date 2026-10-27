@@ -1,0 +1,38 @@
+name: Verify release contracts
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  contracts-and-browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      UV_PYTHON: '3.12'
+      PLAYWRIGHT_HOST_PLATFORM_OVERRIDE: ubuntu24.04-x64
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.12.24'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: uv sync --frozen --extra test
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: uv run --frozen python scripts/validate_release.py --mode ci --browser
+      - name: Build GitHub Pages read-only research viewer
+        run: npm run build:pages
+      - name: Verify packaged video, captions and project paths
+        run: npm run help:validate:pages
+      - name: Verify project-subpath research replay
+        run: npx playwright test -c playwright.pages.config.ts
+      - run: npm audit --audit-level=moderate
+      - name: Preserve evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ghosttrace-validation-evidence
+          path: artifacts/qa/
+          retention-days: 14

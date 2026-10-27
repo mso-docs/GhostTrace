@@ -1,0 +1,48 @@
+name: Prepare GitHub Pages research demo
+# Deliberately manual and build-only. This workflow does not publish a site.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-preparation
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    env:
+      PLAYWRIGHT_HOST_PLATFORM_OVERRIDE: ubuntu24.04-x64
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Require measured, curated research evidence
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const bundle=JSON.parse(fs.readFileSync('web/public/research/demo.json','utf8'));
+          if(bundle.schema_version!=='2.0'||!bundle.study||!Array.isArray(bundle.captures)||bundle.captures.length===0)throw Error('A measured v2 research bundle is required.');
+          if(JSON.stringify(bundle).includes('synthetic_test_fixture'))throw Error('A synthetic UI fixture cannot be published as research evidence.');
+          JS
+      - name: Validate captioned researcher walkthrough
+        run: npm run help:validate
+      - name: Build read-only project-site viewer
+        run: npm run build:pages
+      - name: Verify packaged video, captions and project paths
+        run: npm run help:validate:pages
+      - name: Install pinned Chromium test runtime
+        run: npx playwright install --with-deps chromium
+      - name: Verify project-subpath read-only behavior
+        run: npx playwright test -c playwright.pages.config.ts
+      - name: Package build for human review (no deployment)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ghosttrace-pages-preview
+          path: dist
+          if-no-files-found: error
+          retention-days: 14
+# Add a separately reviewed deploy-pages job only after scientific and subpath
+# browser gates pass and the owner explicitly authorizes publication.

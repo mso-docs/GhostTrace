@@ -1,0 +1,40 @@
+{
+  "name": "ghosttrace-workbench",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:e2e": "playwright test",
+    "test:e2e:report": "playwright show-report artifacts/qa/playwright-html",
+    "typecheck": "tsc --noEmit",
+    "dev:full": "node scripts/dev.mjs",
+    "api:types": ".venv/bin/python scripts/generate_api_types.py",
+    "api:types:check": ".venv/bin/python scripts/generate_api_types.py --check",
+    "build:pages": "VITE_STATIC_DEMO=true VITE_BASE_PATH=/Ghost-Trace/ npm run build",
+    "preview:pages": "VITE_STATIC_DEMO=true VITE_BASE_PATH=/Ghost-Trace/ vite preview --host 127.0.0.1",
+    "record:walkthrough": "node scripts/record_research_walkthrough.mjs",
+    "help:validate": "node scripts/validate_help_assets.mjs",
+    "help:validate:pages": "node scripts/validate_help_assets.mjs --dist dist --base /Ghost-Trace/"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "5.2.8",
+    "@fontsource/ibm-plex-mono": "5.2.7",
+    "@fontsource/manrope": "5.2.8",
+    "fflate": "0.8.3",
+    "lucide-react": "0.468.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.56.1",
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "4.7.0",
+    "typescript": "5.9.3",
+    "vite": "6.4.5"
+  }
+}

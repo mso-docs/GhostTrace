@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0",
+  "file": "demo.json",
+  "sha256": "527ae051ac1b528e02b728e19fd8eed3eca13a7efc1d416ebbe1b331cde46d78",
+  "byte_length": 4543638,
+  "hash_protocol": "raw UTF-8 file bytes",
+  "source_records_unchanged": true,
+  "absolute_host_paths_found": 0,
+  "redactions_applied": false,
+  "raw_arrays_included": false,
+  "interpretation": "Recorded viewer tiles and measured records; raw arrays remain in separately exported research ZIPs. File checksum verifies integrity, not authorship or scientific validity."
+}

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghosttrace"
+version = "0.1.0"
+description = "Local-first controlled language model representation research"
+requires-python = ">=3.11,<3.13"
+dependencies = ["fastapi==0.115.12", "uvicorn==0.34.2", "pydantic==2.11.4", "PyYAML==6.0.2", "numpy==2.2.5"]
+
+[project.optional-dependencies]
+model = ["torch==2.7.0", "transformers==4.51.3", "safetensors==0.5.3", "huggingface-hub==0.30.2"]
+test = ["pytest==8.3.5", "httpx==0.28.1"]
+
+[project.scripts]
+ghosttrace = "ghosttrace.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

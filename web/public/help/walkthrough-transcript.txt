@@ -1,0 +1,36 @@
+GhostTrace: first researcher session
+
+Actual screen recording of the measured Qwen2.5-0.5B CPU/FP32 case. Silent video; English descriptive captions. No inference is executed.
+
+00:00:00.000 — Start with recorded evidence
+Open the Research lab and load the recorded research case. It needs no API or model download.
+This is a real pinned Qwen copying diagnostic. You are replaying saved measurements, not running new inference.
+
+00:00:15.000 — Define the question
+Open Case study. Read the blue-minus-red target, the donor and recipient contrast, and the prior hypothesis.
+Check baseline task behavior before interpreting internals. This small exploratory example does not establish a general copying circuit.
+
+00:00:30.000 — Follow the computation graph
+Return to Linked workspace. Select a component in the computation graph and inspect its block and site.
+Structural edges describe the model architecture. An observed activation or a measured intervention is a different kind of evidence.
+
+00:00:45.000 — Inspect literal activations
+Scroll to Activation microscope. Choose a token and a coordinate to inspect its signed floating-point value.
+Check axes, normalization and saved-channel coverage. Omitted coordinates are unavailable, not zero; large values are not concept labels.
+
+00:01:00.000 — Read the output target
+Inspect Target-output readout. Compare the target contrast across captured blocks and the available readout instruments.
+A logit lens is an output projection, not a transcript of thoughts. The fitted lens uses a small separate development and held-out corpus.
+
+00:01:15.000 — Test effects and controls
+Open Interventions. Compare raw signed changes with self, random, reverse and same-condition controls where recorded.
+Gradient attribution is an estimate. Exact patches and receiver-path experiments are separate tests. Final full-residual replacement is a wiring control.
+
+00:01:30.000 — Keep features and error together
+Open Features & circuits. Inspect reconstruction error and compare a feature attribution estimate with its exact measured edit.
+The bundled identity dictionary is a nonlearned coordinate diagnostic. Reconstruction quality alone does not establish behavioral fidelity or a semantic feature.
+
+00:01:45.000 — Save an honest research record
+Return to Case study. Review alternatives, unresolved interpretations and provenance, then use Case JSON to save the recorded evidence.
+For new experiments, install the local runtime, validate a pinned model profile, freeze your study and record controls. Human scientific review remains necessary.
+

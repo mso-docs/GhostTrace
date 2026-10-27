@@ -1,0 +1,40 @@
+analysis:
+  bootstrap_draws: 2000
+  bootstrap_seed: 20261027
+  primary_layer: middle_block
+  primary_metric: normalized_l2
+capture:
+  anchors:
+  - last_scenario_token
+  - last_prompt_token
+  continuation_tokens: 16
+  layers: all
+  site: residual_post_block_pre_final_norm
+  storage_dtype: float32
+  use_cache: false
+conditions:
+- neutral
+- remorseful
+- unremorseful
+dataset: datasets/smoke-v1
+generation:
+  do_sample: false
+  max_new_tokens: 96
+  stop: model_eos
+limits:
+  batch_size: 1
+  max_artifact_bytes: 2000000000
+  max_input_tokens: 512
+  max_total_tokens: 640
+model_profile: qwen25-05b-cpu
+modes:
+- fixed_continuation
+- greedy_generation
+name: ghosttrace-release-smoke-ab
+order_seed: 73
+preregistration: preregistrations/release-smoke-ab.md
+schema_version: '1.0'
+split_policy: family-heldout-v1
+templates:
+- A
+- B

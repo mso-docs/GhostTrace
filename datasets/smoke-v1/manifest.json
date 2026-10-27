@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "id": "smoke-v1",
+  "parent_dataset": "synthetic-v1",
+  "scenario_count": 3,
+  "source_ids": [
+    "accidental_breakage-01",
+    "missed_commitments-01",
+    "credit_taking-01"
+  ],
+  "license": "CC0-1.0",
+  "review_status": "pending_human_review",
+  "dataset_sha256": "b7783b2d1019483df7b2cff7d1705732cc6af9377615eedff5f65eddf8d58e52"
+}

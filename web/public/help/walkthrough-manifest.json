@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0-walkthrough",
+  "recorded_at": "2026-10-27T16:32:57.294Z",
+  "duration_seconds": 120,
+  "audio": "none; descriptive English captions and transcript",
+  "capture": "Playwright screen recording of the actual running static research viewer",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "model_inference_executed": false,
+  "case_sha256": "527ae051ac1b528e02b728e19fd8eed3eca13a7efc1d416ebbe1b331cde46d78",
+  "chapter_script_sha256": "362ba6406a73638c1550ff794cb25325a12df915ce47c9b6338b01f022f67985",
+  "video_sha256": "a19b50708e6233f467b2a593ba862fae34fa11add678037414cc7e7eb8b6ccf6",
+  "chapters": [
+    {
+      "id": "orientation",
+      "start": 0,
+      "title": "Start with recorded evidence"
+    },
+    {
+      "id": "question",
+      "start": 15,
+      "title": "Define the question"
+    },
+    {
+      "id": "graph",
+      "start": 30,
+      "title": "Follow the computation graph"
+    },
+    {
+      "id": "activations",
+      "start": 45,
+      "title": "Inspect literal activations"
+    },
+    {
+      "id": "readouts",
+      "start": 60,
+      "title": "Read the output target"
+    },
+    {
+      "id": "interventions",
+      "start": 75,
+      "title": "Test effects and controls"
+    },
+    {
+      "id": "features",
+      "start": 90,
+      "title": "Keep features and error together"
+    },
+    {
+      "id": "limits",
+      "start": 105,
+      "title": "Save an honest research record"
+    }
+  ]
+}

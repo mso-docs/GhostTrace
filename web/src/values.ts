@@ -1,0 +1,3 @@
+export const numeric=(v:number|null|undefined)=>v===null||v===undefined?'Unavailable':Number.isFinite(v)?v.toFixed(6):'Invalid';
+export const contrastLabels:Record<string,string>={'remorseful-neutral':'Remorseful − Neutral','unremorseful-neutral':'Unremorseful − Neutral','remorseful-unremorseful':'Remorseful − Unremorseful','neutral-repeat':'Neutral exact repeat · numerical floor','neutral-wording':'Neutral A/B · wording control','label-only-neutral':'Label-only neutral · lexical control','factual-wording':'Factual task A/B · wording control'};
+export const contrastLabel=(name:string)=>contrastLabels[name]||name;

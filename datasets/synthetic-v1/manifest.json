@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-27T00:00:00Z",
+  "id": "synthetic-v1",
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "scenario_count": 30,
+  "family_count": 5,
+  "split_policy": "family-heldout-v1",
+  "development_families": [
+    "accidental_breakage",
+    "missed_commitments",
+    "credit_taking"
+  ],
+  "holdout_families": [
+    "avoidable_inconvenience",
+    "careless_communication"
+  ],
+  "development_count": 18,
+  "holdout_count": 12,
+  "review_status": "pending_human_review",
+  "confirmatory_use_allowed": false,
+  "continuation_token_status": "Must verify 16\u201332 tokens against pinned tokenizer before freeze",
+  "dataset_sha256": "319b63f9feaa4f3299d6b8a8a1170c09cabe1cab2e477f69dc8649b345ed1c34",
+  "templates_sha256": "ca999dd6127bad5a83698ac921af7247273a2245bdfee552e0feb54f072221da",
+  "canonical_hash": "sha256 of sorted-key compact UTF-8 JSON excluding sha256 field; file hashes are raw bytes",
+  "notes": [
+    "Synthetic development fixture, not experimental results.",
+    "Human review and tokenizer verification remain prerequisites for a confirmatory run.",
+    "Dataset changes require a new version; never edit based on observed holdout results."
+  ],
+  "factual_control_count": 12,
+  "factual_controls_sha256": "cd3ab72544304fc3621b54b50390eefa6d01d7f6c84cd3a3c195b3dfadd89992",
+  "factual_control_role": "exploratory only; excluded from primary scenario n and holdout"
+}
