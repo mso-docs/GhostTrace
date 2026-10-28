@@ -19,7 +19,7 @@ for(const c of chapters){assert.ok(captions.includes(c.action)&&captions.include
 assert.ok(fs.statSync(root+'walkthrough-poster.jpg').size>1000);
 const args=process.argv.slice(2);let builtArtifact=null;
 if(args.includes('--dist')){
- const directory=args[args.indexOf('--dist')+1],base=args.includes('--base')?args[args.indexOf('--base')+1]:'/Ghost-Trace/';
+ const directory=args[args.indexOf('--dist')+1],base=args.includes('--base')?args[args.indexOf('--base')+1]:'/GhostTrace/';
  assert.ok(directory&&!directory.startsWith('--'),'Supply a built directory after --dist');
  assert.ok(base.startsWith('/')&&base.endsWith('/'),'Expected an absolute project-site base with trailing slash');
  const assets=['researcher-walkthrough.webm','researcher-walkthrough.en.vtt','walkthrough-transcript.txt','walkthrough-poster.jpg','walkthrough-manifest.json'];

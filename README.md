@@ -27,15 +27,15 @@ The measured case also contains two dictionary projections with visible reconstr
 
 Locally, the v2 API supports arbitrary named role-message conditions, fixed target metrics, explicit component/token budgets, queued capture/intervention/artifact jobs, safe dictionary/lens imports, development-only lens fitting, feature-coordinate edits and annotations, external circuit import, hypothesis records and replayable research ZIPs. Viewing saved results never loads model weights. The separate v1 persona protocol and its review/holdout gates remain unchanged. See [the implementation and evidence status](docs/MECH_INTERP_IMPLEMENTATION.md).
 
-## GitHub Pages preparation (not published)
+## GitHub Pages static demo
 
 ```bash
 npm run build:pages
 npm run preview:pages -- --port 4174
-# Open http://127.0.0.1:4174/Ghost-Trace/
+# Open http://127.0.0.1:4174/GhostTrace/
 ```
 
-This dedicated static mode automatically opens the measured research case, keeps graph/token/tile/readout/control inspection interactive, and removes API, inference and rating-save controls. Browser imports remain local. The manual workflow only builds, tests and uploads a review artifact; it does **not** deploy. See [Pages setup and subpath verification](docs/GITHUB_PAGES_SETUP.md).
+This dedicated static mode automatically opens the measured research case, keeps graph/token/tile/readout/control inspection interactive, and removes API, inference and rating-save controls. Browser imports remain local. The manual **Deploy GitHub Pages research demo** workflow builds and tests the static viewer, then deploys it from `main`. See [Pages setup and subpath verification](docs/GITHUB_PAGES_SETUP.md).
 
 ## Run the full local stack
 

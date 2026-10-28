@@ -13,11 +13,11 @@
     "dev:full": "node scripts/dev.mjs",
     "api:types": ".venv/bin/python scripts/generate_api_types.py",
     "api:types:check": ".venv/bin/python scripts/generate_api_types.py --check",
-    "build:pages": "VITE_STATIC_DEMO=true VITE_BASE_PATH=/Ghost-Trace/ npm run build",
-    "preview:pages": "VITE_STATIC_DEMO=true VITE_BASE_PATH=/Ghost-Trace/ vite preview --host 127.0.0.1",
+    "build:pages": "VITE_STATIC_DEMO=true VITE_BASE_PATH=/GhostTrace/ npm run build",
+    "preview:pages": "VITE_STATIC_DEMO=true VITE_BASE_PATH=/GhostTrace/ vite preview --host 127.0.0.1",
     "record:walkthrough": "node scripts/record_research_walkthrough.mjs",
     "help:validate": "node scripts/validate_help_assets.mjs",
-    "help:validate:pages": "node scripts/validate_help_assets.mjs --dist dist --base /Ghost-Trace/"
+    "help:validate:pages": "node scripts/validate_help_assets.mjs --dist dist --base /GhostTrace/"
   },
   "dependencies": {
     "@fontsource/dm-sans": "5.2.8",

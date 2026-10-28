@@ -53,7 +53,7 @@ npm run build:pages
 npm run preview:pages -- --port 4180 --strictPort
 
 # Terminal 2 — requires the installed Playwright Chromium runtime
-WALKTHROUGH_URL=http://127.0.0.1:4180/Ghost-Trace/ npm run record:walkthrough
+WALKTHROUGH_URL=http://127.0.0.1:4180/GhostTrace/ npm run record:walkthrough
 node scripts/validate_help_assets.mjs
 # Rebuild when packaging the newly recorded media
 npm run build:pages

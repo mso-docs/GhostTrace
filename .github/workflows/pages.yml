@@ -1,11 +1,10 @@
-name: Prepare GitHub Pages research demo
-# Deliberately manual and build-only. This workflow does not publish a site.
+name: Deploy GitHub Pages research demo
 on:
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: pages-preparation
+  group: pages
   cancel-in-progress: false
 jobs:
   prepare:
@@ -37,12 +36,21 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Verify project-subpath read-only behavior
         run: npx playwright test -c playwright.pages.config.ts
-      - name: Package build for human review (no deployment)
-        uses: actions/upload-artifact@v4
+      - name: Upload verified GitHub Pages site
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: ghosttrace-pages-preview
           path: dist
-          if-no-files-found: error
-          retention-days: 14
-# Add a separately reviewed deploy-pages job only after scientific and subpath
-# browser gates pass and the owner explicitly authorizes publication.
+  deploy:
+    needs: prepare
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
