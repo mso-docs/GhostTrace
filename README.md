@@ -2,6 +2,8 @@
 
 A polished local-first research engine and visual workbench for controlled prompt-condition comparisons. React/TypeScript/Vite, Python/FastAPI, a single SQLite-backed worker, and direct Transformers residual hooks.
 
+Read the project write-up on DEV: [GhostTrace: A Local Workbench for Looking Inside Language Models](https://dev.to/mackenzie-techdocs/ghosttrace-a-local-workbench-for-looking-inside-language-models-45p).
+
 ## Open the workbench
 
 ```bash
